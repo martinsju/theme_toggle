@@ -2,10 +2,14 @@ import React from 'react'
 import ReactSwitch from 'react-switch'
 
 const ToggleSwitcher: React.FC = function () {
+	const handleToggleTheme = () => {
+		console.log('click')
+	}
+
 	return (
 		<ReactSwitch
 			checked={true}
-			onChange={() => {}}
+			onChange={handleToggleTheme}
 			checkedIcon={false}
 			uncheckedIcon={false}
 			height={10}
