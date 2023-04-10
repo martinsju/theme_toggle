@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from './components/Header'
 import GlobalStyle from './styles/global'
+import { CustomThemeProvider } from './hooks/theme'
 
 const App: React.FC = function () {
 	return (
-		<div>
+		<CustomThemeProvider>
 			<GlobalStyle />
 			<Header />
-		</div>
+		</CustomThemeProvider>
 	)
 }
 
