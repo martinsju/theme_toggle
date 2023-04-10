@@ -12,8 +12,8 @@ export default createGlobalStyle`
 
 body {
     margin: 0 auto;
-    background-color: #050716;
-    color: #f7f7f7;
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
 }
 
 `

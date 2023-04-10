@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React from 'react'
+import styled, { useTheme } from 'styled-components'
 import ToggleSwitcher from '../ToggleSwitcher'
 
 const Container = styled.div`
-	background-color: #14132d;
+	background-color: ${(props) => props.theme.colors.primary};
 	padding: 15px;
 	display: flex;
 	justify-content: space-between;
@@ -25,17 +25,19 @@ const Title = styled.h1`
 const Label = styled.label`
 	font-size: 8px;
 	font-weight: 100;
-	color: #bfbfbf;
+	color: ${(props) => props.theme.colors.text};
 	text-align: center;
 `
 
 const Header: React.FC = () => {
+	const theme = useTheme()
+
 	return (
 		<Container>
 			<Title>Theme Toggle</Title>
 			<ToggleArea>
 				<ToggleSwitcher />
-				<Label>Theme: lorem</Label>
+				<Label>Theme: {theme.title}</Label>
 			</ToggleArea>
 		</Container>
 	)
