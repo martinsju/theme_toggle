@@ -7,15 +7,36 @@ const Container = styled.div`
 	padding: 15px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+`
+
+const ToggleArea = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	gap: 5px;
+`
+
+const Title = styled.h1`
+	font-size: 24px;
+`
+
+const Label = styled.label`
+	font-size: 8px;
+	font-weight: 100;
+	color: #bfbfbf;
+	text-align: center;
 `
 
 const Header: React.FC = () => {
-	const [a, setA] = useState()
-
 	return (
 		<Container>
-			<h1>Theme Toggle</h1>
-			<ToggleSwitcher />
+			<Title>Theme Toggle</Title>
+			<ToggleArea>
+				<ToggleSwitcher />
+				<Label>Theme: lorem</Label>
+			</ToggleArea>
 		</Container>
 	)
 }
