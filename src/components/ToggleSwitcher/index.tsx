@@ -3,7 +3,7 @@ import ReactSwitch from 'react-switch'
 import { useTheme } from '../../hooks/theme'
 
 const ToggleSwitcher: React.FC = function () {
-	const { toggleTheme } = useTheme()
+	const { theme, toggleTheme } = useTheme()
 
 	const handleToggleTheme = () => {
 		toggleTheme()
@@ -11,7 +11,7 @@ const ToggleSwitcher: React.FC = function () {
 
 	return (
 		<ReactSwitch
-			checked={true}
+			checked={theme.title === 'Dark'}
 			onChange={handleToggleTheme}
 			checkedIcon={false}
 			uncheckedIcon={false}
