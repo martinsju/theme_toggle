@@ -23,5 +23,6 @@
   "include": [
     "src",
     "src/components"
-  ]
+  ],
+  "files": ["src/styles/styled.d.ts"]
 }
