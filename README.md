@@ -1,6 +1,6 @@
 # Theme Toggle
 
-[![teste](https://img.shields.io/badge/project-blue?style=flat-square)](https://theme-toggle-theta.vercel.app/)
+[![teste](https://img.shields.io/badge/vercel-project-blue?style=flat-square)](https://theme-toggle-theta.vercel.app/)
 
 See the project at https://theme-toggle-theta.vercel.app/
 
