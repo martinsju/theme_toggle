@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactSwitch from 'react-switch'
-import { useTheme } from '../../hooks/theme'
+import { useTheme } from '../../hooks/useTheme'
 
 const ToggleSwitcher: React.FC = function () {
 	const { theme, toggleTheme } = useTheme()
