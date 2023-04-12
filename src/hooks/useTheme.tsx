@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 import { DarkTheme, LightTheme } from '../styles/themes'
-import { ThemeProvider } from 'styled-components'
-import { CombinedCodeFixScope } from 'typescript'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
+import usePersistedState from './usePersistedState'
 
 interface ThemeContextData {
 	toggleTheme(): void
@@ -27,7 +27,8 @@ const ThemeContext = createContext({} as ThemeContextData)
 export const useTheme = () => useContext(ThemeContext)
 
 export const CustomThemeProvider: React.FC<ProviderProps> = ({ children }) => {
-	const [theme, setTheme] = useState<Theme>(DarkTheme)
+	// const [theme, setTheme] = useState<Theme>(DarkTheme)
+	const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', DarkTheme)
 
 	const toggleTheme = () => {
 		setTheme((theme) => (theme.title === 'Dark' ? LightTheme : DarkTheme))
