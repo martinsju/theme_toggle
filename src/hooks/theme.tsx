@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 import { DarkTheme, LightTheme } from '../styles/themes'
 import { ThemeProvider } from 'styled-components'
+import { CombinedCodeFixScope } from 'typescript'
 
 interface ThemeContextData {
 	toggleTheme(): void
@@ -18,7 +19,7 @@ interface Theme {
 }
 
 interface ProviderProps {
-	children?: React.ReactNode
+	children: React.ReactNode
 }
 
 const ThemeContext = createContext({} as ThemeContextData)
