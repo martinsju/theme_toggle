@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Theme Toggle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![teste](<(https://img.shields.io/badge/project-blue?style=flat-square)>)(https://theme-toggle-theta.vercel.app/)
+
+See the project at https://theme-toggle-theta.vercel.app/
 
 ## Available Scripts
 
